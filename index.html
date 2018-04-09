@@ -12,7 +12,10 @@
             <h2>Introduction</h2>
         </div>
         <div class="section-content">
+            <p>talk about approach99 data, explain what approach99 is (what it means)</p>
+            <p>This data deals with cardiovascular disease and references a lot of medical jargon that has to do with it. I'll be talking about stuff like coronary arteries, heart conditions, and procedures that are supposed to help relieve these conditions. I'll be explaining any terms along the way of this story.</p>
             <p>The following questions are actually only a few of my proposed questions, with some tweaks here and there. My original questions were mostly the same questions but each one had 2-4 miniature questions, so I wanted to break them up.</p>
+            <p>All questions come with a visual, and there are observations for the visual that you can read if you hover your mouse over the image. An overall summary (and additional info) will be written below the image.</p>
         </div>
     </div>
 
@@ -38,36 +41,31 @@
             <p>Of the four, only two of them are actually a cardiovascular condition; <i>other</i> may indicate a condition that doesn't fall into the previous two categories but is still a known condition.</p>
 
             <p>To answer my question I looked at the record counts of these conditions and viewed them by sex and year, separately.</p>
-            <p><b>(Hover over the charts for my observations!)</b></p>
+
+            <p>These graphs are pretty straightforward and were made by graphing the catheterization indication and sex/year data against the count of number of records. There were no rows that contained null values for these attributes.</p>
 
             <div class="image">
-
                 <!-- graph info -->
                 <img src="approach99-q1a.png">
-                <div class="info-box grey" style="left:760px;bottom:450px;">
+                <div class="info-box " style="left:760px;bottom:450px;">
                     <p>This bar graph shows the total count of files over all the years recorded in the dataset for condition.</p>
                 </div>
 
-                <div class="info-box grey" style="left:760px;bottom:100px;">
+                <div class="info-box " style="left:760px;bottom:100px;">
                     <p>This line graph shows the total (both sexes together) record count of the different conditions from 2008 to 2016. Noticeable peaks and dips are shown too.</p>
                     <p>The black lines are the actual counts, the red dotted lines are <b>polynomial (degree 2)</b> trendlines.</p>
                 </div>
 
                 <!-- info -->
-                <div class="float-box yellow" style="left:10px; bottom:470px;">
+                <div class="float-box " style="left:10px; bottom:470px;">
                     <p>Acute coronary syndrome clearly has the highest number of patients for both sexes</p>
                 </div>
 
-                <div class="float-box yellow" style="left:410px; bottom:470px;">
+                <div class="float-box " style="left:410px; bottom:470px;">
                     <p>There are consistently less females with these conditions, roughly 1:2 female-to-male ratio in every category</p>
-                </div>
-
-                <div class="float-box yellow" style="left:150px;bottom:20px;">
-                    <p>In general there's a positive trend for number of patients over the years for each condition</p>
                 </div>
             </div>
 
-            <p>These graphs are pretty straightforward and were made by graphing the catheterization indication and sex/year data against the count of number of records. There were no rows that contained null values for these attributes.</p>
             <p>In the line graph I've pointed out a few interesting peaks and dips in the record counts.</p>
             <ul>
                 <li>The amount of patients with acute coronary heart syndrome rose in 2013, only to dip down again the next year, and then rise once more in 2015</li>
@@ -84,125 +82,150 @@
             </ul>
         </div>
         <div class="section-content">
-            <p>Here's the line chart showing the general trends of catherization indications over the years again.</p>
-            
-            <ul>
-                <li>In general there's fluctuation in number of patients noted between 2012-2015 for all categories, and the data generally plateaus (almost flat incline or decline) by 2016</li>
+            <p>Here's the line chart showing the general trends of catheterization indications over the years again (but bigger).</p>
 
-            </ul>
+            <div class="image">
+                <img src="approach99-q1a2.png">
 
-            <p>The r-squared and p-values for the trendlines (trimmed to 4 decimal places, not rounded):</p>
-            <table>
-                <tr>
-                    <th>Indication</th>
-                    <th>R-squared</th>
-                    <th>p-value</th>
-                </tr>
-                <tr>
-                    <td>Acute Coronary Syndrome</td>
-                    <td>0.8146</td>
-                    <td>0.0006</td>
-                </tr>
-                <tr>
-                    <td>Stable Angina</td>
-                    <td>0.5789</td>
-                    <td>0.0746</td>
-                </tr>
-                <tr>
-                    <td>Other</td>
-                    <td>0.9287</td>
-                    <td>0.0003</td>
-                </tr>
-                <tr>
-                    <td>Not Entered/Unknown</td>
-                    <td>0.6475</td>
-                    <td>0.0438</td>
-                </tr>
+                <div class="float-box " style="left:230px;bottom:320px;">
+                    <p>In general there's a positive trend for number of patients over the years for each condition</p>
+                </div>
 
-            </table>
+                <div class="float-box " style="left:45px;bottom:50px;">
+                    <p>Some fluctuation in number of patients between 2012-2015 for all categories</p>
+                    <p>Data has fairly flat slope from 2015-2016 for all categories</p>
+                </div>
+
+                <div class="float-box " style="left:615px;bottom:150px;">
+                    <p>Looks like a hump!</p>
+                </div>
+
+                <div class="info-box " style="left:780px;bottom:100px;">
+                    <p>The r-squared and p-values for the trendlines (trimmed to 4 decimal places, not rounded):</p>
+                    <table>
+                        <tr>
+                            <th>Condition</th>
+                            <th>R-squared</th>
+                            <th>p-value</th>
+                        </tr>
+                        <tr>
+                            <td>Acute Coronary Syndrome</td>
+                            <td>0.8146</td>
+                            <td>0.0006</td>
+                        </tr>
+                        <tr>
+                            <td>Stable Angina</td>
+                            <td>0.5789</td>
+                            <td>0.0746</td>
+                        </tr>
+                        <tr>
+                            <td>Other</td>
+                            <td>0.9287</td>
+                            <td>0.0003</td>
+                        </tr>
+                        <tr>
+                            <td>Not Entered/Unknown</td>
+                            <td>0.6475</td>
+                            <td>0.0438</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
 
             <sub>Note:</sub><br>
             <sub>R-squared is a measure from 0 to 1 of how close the data is to the fitted trendline; higher is better.</sub><br>
             <sub>P-value is the probability that the equation for the trendline was a result of random chance; lower is better (&le; 0.05 is pretty good).</sub>
 
-            <p>Linear trendlines represented most of the data pretty well. 'Stable Angina' wasn't great (R-squared = 0.3666, p-value = 0.0839), the dip in 2012 is probably contributing to that. The 'Unknown' category didn't do well with a linear trendline -- since it looks like a hump a linear trendline did an abysmal job representing it (R-squared = 0.0788, p-value = 0.4641).</p>
+            <p>I first tried linear trendlines and those represented most of the data pretty well. 'Stable Angina' wasn't great (R-squared = 0.3666, p-value = 0.0839), the dip in 2012 is probably contributing to that. The 'Unknown' category didn't do well with a linear trendline -- since it looks like a hump its linear trendline looked pretty flat, and so did an abysmal job representing the data (R-squared = 0.0788, p-value = 0.4641).</p>
             <p>In the end I switched to a polynomial representation of the trends and the trendline for the 'Unknown' category improved; the representation for the other categories also improved slightly. 'Stable Angina' <i>still</i> doesn't have as good scores as the others but it's better than it was with a linear trendline.</p>
 
             <p>I also went a little deeper and plotted the same line graph but partitioned the data by male and female, so you can see the trends in better detail.</p>
 
            <div class="image">
                <img src="approach99-q1b.png">
+               <div class="info-box" style="left:760px;bottom:150px;">
+                   <p>The timelines for patient count now show only males or females. What you saw in the previous line graph was pretty much the sum of these line charts for each category.</p>
+                   <p>These trendlines are also polynomial (degree 2).</p>
+               </div>
 
-               <div class="float-box" style="left:760px;bottom:400px;">
-                   <p>Interestingly, the vertical positioning of the line charts mimics the height of the bar charts</p>
+               <div class="float-box" style="left:-20px;bottom:280px;">
+                   <p>Interestingly, the proportional of the line charts is (mostly) similar to the height of the bar charts</p>
+                   <p>Distance is not the same because the scales are different</p>
                </div>
 
                <!-- info -->
-               <div class="float-box" style="left:630px;bottom:150px;">
+               <div class="float-box" style="left:430px;bottom:200px;">
                    <p>Trends are still generally positive, the pattern for unknown data is pretty similar for both sexes</p>
                </div>
            </div>
 
-            <p>If you have trouble seeing the trendlines, I've got them isolated here.</p>
+            <p>If you have trouble seeing the trendlines, I've got them isolated below.</p>
             <div class="image">
                 <img src="approach99-q1c.png">
+
+                <div class="info-box" style="left:760px;bottom:200px;">
+                    <p>R-squared and p-values for the trendlines (trimmed to 4 decimal places, not rounded):</p>
+                    <table>
+                        <tr>
+                            <th>Indication</th>
+                            <th>Sex</th>
+                            <th>R-squared</th>
+                            <th>p-value</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Acute Coronary Syndrome</td>
+                            <td>Female</td>
+                            <td>0.7602</td>
+                            <td>0.0137</td>
+                        </tr>
+                        <tr>
+                            <td>Male</td>
+                            <td>0.5955</td>
+                            <td>0.0661</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Stable Angina</td>
+                            <td>Female</td>
+                            <td>0.6407</td>
+                            <td>0.0463</td>
+                        </tr>
+                        <tr>
+                            <td>Male</td>
+                            <td>0.4125</td>
+                            <td>0.2027</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Other</td>
+                            <td>Female</td>
+                            <td>0.8233</td>
+                            <td>0.0055</td>
+                        </tr>
+                        <tr>
+                            <td>Male</td>
+                            <td>0.9556</td>
+                            <td>&lt; 0.0001</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Not Entered/Unknown</td>
+                            <td>Female</td>
+                            <td>0.8185</td>
+                            <td>0.0059</td>
+                        </tr>
+                        <tr>
+                            <td>Male</td>
+                            <td>0.5430</td>
+                            <td>0.0953</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="float-box " style="left:-130px;bottom:190px;">
+                    <p>The slope for trends in females looks slightly less pronounced (looks 'flatter') in all categories</p>
+                </div>
             </div>
 
-            <p>Here are the R-squared and p-values for the above trendlines (trimmed to 4 decimal places, not rounded):</p>
-            <table>
-                <tr>
-                    <th>Indication</th>
-                    <th>Sex</th>
-                    <th>R-squared</th>
-                    <th>p-value</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">Acute Coronary Syndrome</td>
-                    <td>Female</td>
-                    <td>0.7602</td>
-                    <td>0.0137</td>
-                </tr>
-                <tr>
-                    <td>Male</td>
-                    <td>0.5955</td>
-                    <td>0.0661</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Stable Angina</td>
-                    <td>Female</td>
-                    <td>0.6407</td>
-                    <td>0.0463</td>
-                </tr>
-                <tr>
-                    <td>Male</td>
-                    <td>0.4125</td>
-                    <td>0.2027</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Other</td>
-                    <td>Female</td>
-                    <td>0.8233</td>
-                    <td>0.0055</td>
-                </tr>
-                <tr>
-                    <td>Male</td>
-                    <td>0.9556</td>
-                    <td>&lt; 0.0001</td>
-                </tr>
-                <tr>
-                    <td rowspan="2">Not Entered/Unknown</td>
-                    <td>Female</td>
-                    <td>0.8185</td>
-                    <td>0.0059</td>
-                </tr>
-                <tr>
-                    <td>Male</td>
-                    <td>0.5430</td>
-                    <td>0.0953</td>
-                </tr>
-            </table>
-
-            <p>You can see that the trendlines aren't as good (the ones for unknown data [males] and stable angina [males] is pretty bad, R-squared &lt; .55, and the line for stable angina [males] has a p-value of .2 so there's a 20% chance the line generated was random). I wanted to keep the calculation for these consistent with the previously calculated trendlines though.</p>
+            <p>The trendlines for unknown data [males] and 'Stable Angina' [males] aren't so good at representing their data (both have R-squared &lt; 0.55 -- it only represents about 55% of the data?!) and the line for stable angina [males] has a p-value of 0.2 (!!) so there's a 20% chance the line generated was random. This could be because the variation in data count is much bigger for males (more and steeper hills and valleys). I wanted to keep the calculation for these consistent with the previously calculated trendlines though.</p>
+            <p>(The trendline for 'other' conditions [males] is <i>really</i> good!)</p>
         </div>
 
         <div class="section-title">
@@ -213,9 +236,43 @@
         </div>
 
         <div class="section-content">
-            <img src="approach99-q2a.png">
+            <p>I wanted to see if the condition the patient had affected how many procedures they went through.</p>
+            <p>We already know what a catheterization is, but what are the other procedures?</p>
+            <ul>
+                <li><b>percutaneous coronary intervention</b> (PCI): a non-surgical procedure used to treat narrowing of the coronary arteries of the heart found in coronary artery disease<sup>[4]</sup>
+                    <ul>
+                        <li>used in people with acute myocardial infarction (heart attack), unstable angina, and stable angina<sup>[4]</sup></li>
+                        <li>is an alternative to CABG</li>
+                    </ul>
+                </li>
+                <li><b>coronary artery bypass surgery</b> (CABG): a surgical procedure to restore normal bloodflow to an obstructed coronary artery<sup>[5]</sup>
+                    <ul>
+                        <li>often for when coronary arteries have a 50 to 99% obstruction<sup>[5]</sup></li>
+                    </ul>
+                </li>
+            </ul>
 
-            <img src="approach99-q2b.png">
+            <p>Since PCIs are often used in lieu of CABGs, we'd expect more patients to have more PCIs in this dataset.</p>
+
+            <p>These next visuals only look at patients who had a catheterization file (some patients only appear to have a PCI or CABG file but no catheterization file, so I left them out for this analysis). To make the graphs I counted the number of occurrences for each patient's file number in the PCI and CABG records and recorded them in a new column (one for each procedure).</p>
+
+            <div class="image">
+                <img src="approach99-q2a.png">
+
+                <div class="info-box" style="left:760px;bottom:200px;">
+                    <p>This graph shows the <i>total</i> number of procedures that were recorded for each condition in the data.</p>
+                </div>
+
+                <div class="float-box" style="left:200px;bottom:400px;">
+                    <p>Patients who had a catheterization file definitely mostly had PCIs as opposed to CABGs</p>
+                </div>
+
+                <div class="float-box" style="left:20px;bottom:100px;">
+                    <p>Most PCIs recorded were for patients with acute coronary syndrome</p>
+                </div>
+            </div>
+
+            <img src="approach99-q3a.png">
         </div>
 
         <div class="section-title">
@@ -254,7 +311,8 @@
     <div id="methodology"></div>
     <div id="citations">
         <h3>Citations</h3>
-        <p><a href="http://www.heart.org/HEARTORG/Conditions/HeartAttack/AboutHeartAttacks/Acute-Coronary-Syndrome_UCM_428752_Article.jsp#.WsqO3IjwaHs">[1]</a> <a href="http://www.heart.org/HEARTORG/Conditions/HeartAttack/SymptomsDiagnosisofHeartAttack/Angina-Pectoris_UCM_437515_Article.jsp#.WsqjEIjwaHt">[2]</a> <a href="http://www.heart.org/HEARTORG/Conditions/More/MyHeartandStrokeNews/Coronary-Artery-Disease---Coronary-Heart-Disease_UCM_436416_Article.jsp#.WsqjqojwaHs">[3]</a> definitions from the American Heart Association (www.heart.org) for acute coronary syndrome, stable angina, and coronary heart disease, respectively</p>
+        <p><a href="http://www.heart.org/HEARTORG/Conditions/HeartAttack/AboutHeartAttacks/Acute-Coronary-Syndrome_UCM_428752_Article.jsp#.WsqO3IjwaHs">[1]</a> <a href="http://www.heart.org/HEARTORG/Conditions/HeartAttack/SymptomsDiagnosisofHeartAttack/Angina-Pectoris_UCM_437515_Article.jsp#.WsqjEIjwaHt">[2]</a> <a href="http://www.heart.org/HEARTORG/Conditions/More/MyHeartandStrokeNews/Coronary-Artery-Disease---Coronary-Heart-Disease_UCM_436416_Article.jsp#.WsqjqojwaHs">[3]</a> quoted definitions from the American Heart Association (www.heart.org) for acute coronary syndrome, stable angina, and coronary heart disease, respectively</p>
+        <p><a href="https://en.wikipedia.org/wiki/Percutaneous_coronary_intervention">[4]</a> <a href="https://en.wikipedia.org/wiki/Coronary_artery_bypass_surgery">[5]</a> quoted information about PCIs and CABGs from Wikipedia, respectively</p>
     </div>
 </body>
 </html>

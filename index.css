@@ -5,13 +5,17 @@ body {
     margin:auto;
 }
 
+sup {
+    font-size:7px;
+}
+
 img {
     max-width:760px;
     margin:auto;
 }
 
 table, th, td {
-    border:1px #eee solid;
+    border:1px #000 solid;
     border-collapse: collapse;
     border-spacing:5px;
     padding:5px;
@@ -29,6 +33,10 @@ table, th, td {
     max-width:200px;
     text-align: center;
     font-size:11px;
+    -webkit-box-shadow: 3px 3px 40px 3px rgba(0,0,0,.5);
+    -moz-box-shadow: 3px 3px 40px 3px rgba(0,0,0,.5);
+    box-shadow: 3px 3px 40px 3px rgba(0,0,0,.5);
+    background:#f6ecdb;
 }
 
 .float-box {
@@ -39,20 +47,21 @@ table, th, td {
     padding:5px 10px;
     margin:0;
     position:absolute;
-    max-width:200px;
-    text-align: center;
-    font-size:11px;
-}
-
-.grey {
+    max-width:450px;
+    text-align: left;
+    font-size:10px;
     background:#eee;
 }
 
-.yellow {
+
+.section-title {
     background:#f6ecdb;
+    margin-bottom:0;
+    padding:5px 10px;
 }
 
 .section-content {
     border-bottom: #eee 3px solid;
     padding:10px;
+    margin-bottom:10px;
 }
