@@ -17,4 +17,9 @@ img {
     position:absolute;
     max-width:200px;
     text-align: left;
+    font-size:12px;
+}
+
+.float-left ul {
+    font-size:11px;
 }
