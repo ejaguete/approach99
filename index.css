@@ -17,6 +17,10 @@ table, th, td {
     padding:5px;
 }
 
+.image {
+    position:relative;
+}
+
 .image:hover .float-box {
     display:inline-block;
     background-color:#f6ecdb;
