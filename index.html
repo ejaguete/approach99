@@ -9,7 +9,7 @@
     <h1>APPROACH99 Data Analysis</h1>
     <div class="section">
         <div class="section-title">
-            <h3>Introduction</h3>
+            <h2>Introduction</h2>
         </div>
 
         <div class="section-content">
@@ -20,12 +20,11 @@
     </div>
 
     <div class="section">
+        <p>The following questions are actually only a few of my proposed questions, with some tweaks here and there. My original questions were mostly the same questions but each one had 2-4 miniature questions, so I wanted to break them up.</p>
         <div class="section-title">
-            Question 1
+            <h2>Question 1:</h2>
             <ul>
-                <li>What is the distribution of catheter indication amongst males and females?</li>
-                <li>Is there a specific year when each indication peaks or dips noticeably in the data? (changed from: Have any indications for catheters become prevalent in a specific year?)</li>
-                <li>What are the trends of the recorded indications?</li>
+                <li>What is the distribution of catheter indication amongst males and females? Have any indications for catheters become prevalent in a specific year?</li>
             </ul>
         </div>
 
@@ -35,15 +34,13 @@
             </p>
             <ul>
                 <li><b>acute coronary syndrome</b>: an umbrella term for situations where the blood supplied to the heart muscle is suddenly blocked <sup>[1]</sup></li>
-                <li><b>stable angina</b>(also known as angina pectoris): chest pain or discomfort due to coronary heart disease<sup>[2]</sup>, which is a term for the buildup of plaque in the heart's arteries which can lead to heart attack<sup>[3]</sup></li>
+                <li><b>stable angina</b> (also known as angina pectoris): chest pain or discomfort due to coronary heart disease<sup>[2]</sup>, which is a term for the buildup of plaque in the heart's arteries which can lead to heart attack<sup>[3]</sup></li>
                 <li>other</li>
                 <li>the indication is unknown/not entered</li>
             </ul>
             <p>Of the four, only two of them are actually a cardiovascular condition; <i>other</i> may indicate a condition that doesn't fall into the previous two categories but is still a known condition.</p>
 
-            <p>To answer my question I looked at the record counts of these indications and viewed them by sex, year, and then both, and marked anything I thought was noteworthy as well as showed the trendlines for the record counts by year.</p>
-
-            <p>First let's look at the gist of the data. (Hover over the charts for more info!)</p>
+            <p>To answer my question I looked at the record counts of these indications and viewed them by sex and year, separately. (Hover over the charts for more info.)</p>
 
             <div class="image">
 
@@ -121,6 +118,10 @@
             <p>Linear trendlines represented most of the data pretty well. 'Stable Angina' wasn't great (R-squared = 0.3666, p-value = 0.0839), the dip in 2012 is probably contributing to that. The 'Unknown' category didn't do well with a linear trendline -- since it looks like a hump a linear trendline did an abysmal job representing it (R-squared = 0.0788, p-value = 0.4641).</p>
             <p>I switched to a polynomial representation of the trends and the trendline for the 'Unknown' category improved; the representation for the other categories also improved slightly. 'Stable Angina' <i>still</i> doesn't have as good scores as the others but it's better than it was with the linear trendline.</p>
 
+            <h2>Question 2:</h2>
+            <ul>
+                <li>Is there a specific year when each indication peaks or dips noticeably in the data? (changed from: Have any indications for catheters become prevalent in a specific year?)</li>
+            </ul>
             <p>I also went a little deeper and plotted the same line graph but partitioned the data by male and female, so you can see the trends in better detail.</p>
 
            <div class="image">
@@ -141,10 +142,55 @@
                 <img src="approach99-q1c.png">
             </div>
 
+            <p>still need to add r-squared and p-vals pls</p>
+
         </div>
+
+        <div class="section-title">
+            <h2>Question 3:</h2>
+            <ul>
+                <li>What is the relationship between catheter indication and the amount of procedures done, for each procedure (catheter, PCI, CABG)? (Reworded from: For each type of catheter indication, are there distinct patterns in how many procedures a patient has?)</li>
+            </ul>
+        </div>
+
+        <div class="section-content">
+            <img src="approach99-q2a.png">
+
+            <img src="approach99-q2b.png">
+        </div>
+
+        <div class="section-title">
+            <h2>Question 4:</h2>
+            <ul>
+                <li>Are patients with an unknown or 'other' indication coming in for more procedures than patients with acute coronary syndrome? </li>
+            </ul>
+        </div>
+
+        <div class="section-title">
+            <h2>Question 5:</h2>
+            <ul>
+                <li>Is there a relationship between the location of the patient and which facility they are having their procedure done?</li>
+                <li>Are some facilities busier than others based on the amount of procedures recorded in the data?</li>
+            </ul>
+        </div>
+
+        <div class="section-content">
+            <img src="approach99-q5.png">
+        </div>
+
+        <div class="section-title">
+            <h2>Question 6:</h2>
+            <ul>
+                <li>Have Alberta health facilities been taking more and more non-Alberta patients or less?
+                </li>
+            </ul>
+        </div>
+
+        <div class="section-content">
+            <img src="approach99-q6.png">
+        </div>
+
     </div>
-
-
 
     <div id="methodology"></div>
     <div id="citations">
