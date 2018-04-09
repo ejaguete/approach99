@@ -5,11 +5,16 @@ body {
     margin:auto;
 }
 
+img {
+    max-width:760px;
+    margin:auto;
+}
+
 .float-left {
     background-color:#f6ecdb;
     padding:5px 20px;
     margin:0;
     position:absolute;
-    max-width:300px;
+    max-width:200px;
     text-align: left;
 }
