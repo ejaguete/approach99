@@ -23,7 +23,6 @@ table, th, td {
 
 .image:hover .float-box {
     display:inline-block;
-    background-color:#f6ecdb;
     padding:5px 10px;
     margin:0;
     position:absolute;
@@ -34,4 +33,26 @@ table, th, td {
 
 .float-box {
     display:none;
+}
+
+.info-box {
+    padding:5px 10px;
+    margin:0;
+    position:absolute;
+    max-width:200px;
+    text-align: center;
+    font-size:11px;
+}
+
+.grey {
+    background:#eee;
+}
+
+.yellow {
+    background:#f6ecdb;
+}
+
+.section-content {
+    border-bottom: #eee 3px solid;
+    padding:10px;
 }

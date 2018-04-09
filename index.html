@@ -11,26 +11,23 @@
         <div class="section-title">
             <h2>Introduction</h2>
         </div>
-
         <div class="section-content">
-            <p>
-                test test test
-            </p>
+            <p>The following questions are actually only a few of my proposed questions, with some tweaks here and there. My original questions were mostly the same questions but each one had 2-4 miniature questions, so I wanted to break them up.</p>
         </div>
     </div>
 
     <div class="section">
-        <p>The following questions are actually only a few of my proposed questions, with some tweaks here and there. My original questions were mostly the same questions but each one had 2-4 miniature questions, so I wanted to break them up.</p>
         <div class="section-title">
             <h2>Question 1:</h2>
             <ul>
-                <li>What is the distribution of catheter indication amongst males and females? Have any indications for catheters become prevalent in a specific year?</li>
+                <li>What is the distribution of catheterization indication amongst males and females?</li>
+                <li>Is there a specific year when each category peaks or dips noticeably in the data? (changed from: Have any indications for catheters become prevalent in a specific year?)</li>
             </ul>
-        </div>
+        </div> <!-- end title -->
 
         <div class="section-content">
             <p>
-                I wanted to explore the data concerning their "indication for catheter", which refers to the result from or cause of the patients' cardiac catheterization -- which is a procedure used to diagnose and treat cardiovascular conditions. In the dataset there were four possible indications from a patient's catheter file:
+                I wanted to explore the data concerning their "indication for catheterization", which refers to the reason (what condition they have) for the patient's cardiac catheterization -- a procedure used to diagnose and treat cardiovascular conditions. In the dataset there were four possible indications for a patient's catheterization file:
             </p>
             <ul>
                 <li><b>acute coronary syndrome</b>: an umbrella term for situations where the blood supplied to the heart muscle is suddenly blocked <sup>[1]</sup></li>
@@ -40,44 +37,57 @@
             </ul>
             <p>Of the four, only two of them are actually a cardiovascular condition; <i>other</i> may indicate a condition that doesn't fall into the previous two categories but is still a known condition.</p>
 
-            <p>To answer my question I looked at the record counts of these indications and viewed them by sex and year, separately. (Hover over the charts for more info.)</p>
+            <p>To answer my question I looked at the record counts of these conditions and viewed them by sex and year, separately.</p>
+            <p><b>(Hover over the charts for my observations!)</b></p>
 
             <div class="image">
 
                 <!-- graph info -->
                 <img src="approach99-q1a.png">
-                <div class="float-box" style="left:760px;bottom:450px;">
-                    <p>This bar graph shows the total count of files over all the years recorded in the dataset for each indication for a catheter.</p>
+                <div class="info-box grey" style="left:760px;bottom:450px;">
+                    <p>This bar graph shows the total count of files over all the years recorded in the dataset for condition.</p>
                 </div>
 
-                <div class="float-box" style="left:760px;bottom:100px;">
-                    <p>This line graph shows the total (both sexes together) record count of the different catheter indications from 2008 to 2016. Noticeable peaks and dips are shown too.</p>
+                <div class="info-box grey" style="left:760px;bottom:100px;">
+                    <p>This line graph shows the total (both sexes together) record count of the different conditions from 2008 to 2016. Noticeable peaks and dips are shown too.</p>
                     <p>The black lines are the actual counts, the red dotted lines are <b>polynomial (degree 2)</b> trendlines.</p>
                 </div>
 
                 <!-- info -->
-                <div class="float-box" style="left:10px; bottom:470px;">
-                    <p>Acute coronary syndrome clearly has the highest count for both sexes</p>
+                <div class="float-box yellow" style="left:10px; bottom:470px;">
+                    <p>Acute coronary syndrome clearly has the highest number of patients for both sexes</p>
                 </div>
 
-                <div class="float-box" style="left:410px; bottom:470px;">
-                    <p>Females consistently have a lower record count, roughly 1:2 female-to-male ratio in every category</p>
+                <div class="float-box yellow" style="left:410px; bottom:470px;">
+                    <p>There are consistently less females with these conditions, roughly 1:2 female-to-male ratio in every category</p>
                 </div>
 
-                <div class="float-box" style="left:150px;bottom:20px;">
-                    <p>In general there's a positive trend for number of patients over the years for each category</p>
+                <div class="float-box yellow" style="left:150px;bottom:20px;">
+                    <p>In general there's a positive trend for number of patients over the years for each condition</p>
                 </div>
             </div>
 
-            <p>These graphs are pretty straightforward and were made by graphing the catheter indication and sex/year data against the count of number of records. There were no rows that contained null values for these attributes.</p>
-
-            <p> Some additional stuff about the trends:</p>
+            <p>These graphs are pretty straightforward and were made by graphing the catheterization indication and sex/year data against the count of number of records. There were no rows that contained null values for these attributes.</p>
+            <p>In the line graph I've pointed out a few interesting peaks and dips in the record counts.</p>
             <ul>
-                <li>There's a peak-dip-peak pattern between 2012-2015 for acute coronary syndrome</li>
-                <li>You can see a dip in patient records in 2012 for stable angina</li>
-                <li>Records for 'other' conditions dipped in 2013 and then rose until 2015</li>
-                <li>There are very few records whether either the data entries were unknown or not recorded. 2012 has the highest count for unknown data. It also is shaped like a hump</li>
-                <li>There's fluctuation noted between 2012-2015, the data generally plateaus by 2016 (except in 'Other' where it increases)</li>
+                <li>The amount of patients with acute coronary heart syndrome rose in 2013, only to dip down again the next year, and then rise once more in 2015</li>
+                <li>There's a noticeable dip in patients with stable angina in 2012, and then it rises by almost 500 patients in 2014</li>
+                <li>In 2013, the number of patients with 'other' conditions dipped by about 100, only to rise over the next two years by almost 900 patients</li>
+                <li>The highest count of unknown/not entered data for patients' conditions was in 2012</li>
+            </ul>
+        </div> <!-- end content -->
+
+        <div class="section-title">
+            <h2>Question 2:</h2>
+            <ul>
+                <li>What are the trends of the recorded catheterization indications?</li>
+            </ul>
+        </div>
+        <div class="section-content">
+            <p>Here's the line chart showing the general trends of catherization indications over the years again.</p>
+            
+            <ul>
+                <li>In general there's fluctuation in number of patients noted between 2012-2015 for all categories, and the data generally plateaus (almost flat incline or decline) by 2016</li>
 
             </ul>
 
@@ -116,12 +126,8 @@
             <sub>P-value is the probability that the equation for the trendline was a result of random chance; lower is better (&le; 0.05 is pretty good).</sub>
 
             <p>Linear trendlines represented most of the data pretty well. 'Stable Angina' wasn't great (R-squared = 0.3666, p-value = 0.0839), the dip in 2012 is probably contributing to that. The 'Unknown' category didn't do well with a linear trendline -- since it looks like a hump a linear trendline did an abysmal job representing it (R-squared = 0.0788, p-value = 0.4641).</p>
-            <p>I switched to a polynomial representation of the trends and the trendline for the 'Unknown' category improved; the representation for the other categories also improved slightly. 'Stable Angina' <i>still</i> doesn't have as good scores as the others but it's better than it was with the linear trendline.</p>
+            <p>In the end I switched to a polynomial representation of the trends and the trendline for the 'Unknown' category improved; the representation for the other categories also improved slightly. 'Stable Angina' <i>still</i> doesn't have as good scores as the others but it's better than it was with a linear trendline.</p>
 
-            <h2>Question 2:</h2>
-            <ul>
-                <li>Is there a specific year when each indication peaks or dips noticeably in the data? (changed from: Have any indications for catheters become prevalent in a specific year?)</li>
-            </ul>
             <p>I also went a little deeper and plotted the same line graph but partitioned the data by male and female, so you can see the trends in better detail.</p>
 
            <div class="image">
@@ -142,14 +148,67 @@
                 <img src="approach99-q1c.png">
             </div>
 
-            <p>still need to add r-squared and p-vals pls</p>
+            <p>Here are the R-squared and p-values for the above trendlines (trimmed to 4 decimal places, not rounded):</p>
+            <table>
+                <tr>
+                    <th>Indication</th>
+                    <th>Sex</th>
+                    <th>R-squared</th>
+                    <th>p-value</th>
+                </tr>
+                <tr>
+                    <td rowspan="2">Acute Coronary Syndrome</td>
+                    <td>Female</td>
+                    <td>0.7602</td>
+                    <td>0.0137</td>
+                </tr>
+                <tr>
+                    <td>Male</td>
+                    <td>0.5955</td>
+                    <td>0.0661</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Stable Angina</td>
+                    <td>Female</td>
+                    <td>0.6407</td>
+                    <td>0.0463</td>
+                </tr>
+                <tr>
+                    <td>Male</td>
+                    <td>0.4125</td>
+                    <td>0.2027</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Other</td>
+                    <td>Female</td>
+                    <td>0.8233</td>
+                    <td>0.0055</td>
+                </tr>
+                <tr>
+                    <td>Male</td>
+                    <td>0.9556</td>
+                    <td>&lt; 0.0001</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Not Entered/Unknown</td>
+                    <td>Female</td>
+                    <td>0.8185</td>
+                    <td>0.0059</td>
+                </tr>
+                <tr>
+                    <td>Male</td>
+                    <td>0.5430</td>
+                    <td>0.0953</td>
+                </tr>
+            </table>
 
+            <p>You can see that the trendlines aren't as good (the ones for unknown data [males] and stable angina [males] is pretty bad, R-squared &lt; .55, and the line for stable angina [males] has a p-value of .2 so there's a 20% chance the line generated was random). I wanted to keep the calculation for these consistent with the previously calculated trendlines though.</p>
         </div>
 
         <div class="section-title">
             <h2>Question 3:</h2>
             <ul>
-                <li>What is the relationship between catheter indication and the amount of procedures done, for each procedure (catheter, PCI, CABG)? (Reworded from: For each type of catheter indication, are there distinct patterns in how many procedures a patient has?)</li>
+                <li>What is the relationship between catheterization indication and the amount of procedures done, for each procedure (catheterization, PCI, CABG)? (Reworded from: For each type of catheterization indication, are there distinct patterns in how many procedures a patient has?)</li>
             </ul>
         </div>
 
