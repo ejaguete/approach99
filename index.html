@@ -231,12 +231,12 @@
         <div class="section-title">
             <h2>Question 3:</h2>
             <ul>
-                <li>What is the relationship between catheterization indication and the amount of procedures done, for each procedure ( PCI, CABG)? (Reworded from: For each type of catheterization indication, are there distinct patterns in how many procedures a patient has?)</li>
+                <li>How many procedures in total are being done for each condition? (Not part of the original proposed questions, but this more specific than asking what the relationship is between number of procedures and the conditions?</li>
             </ul>
         </div>
 
         <div class="section-content">
-            <p>I wanted to see if the condition the patient had affected how many procedures they went through.</p>
+            <p>I wanted to see if the condition the patient had affected how many procedures they went through, for example if patients with a condition classified 'Unknown' needed more PCIs because their condition was complicated (and therefore unidentifiable).</p>
             <p>We already know what a catheterization is, but what are the other procedures?</p>
             <ul>
                 <li><b>percutaneous coronary intervention</b> (PCI): a non-surgical procedure used to treat narrowing of the coronary arteries of the heart found in coronary artery disease<sup>[4]</sup>
@@ -252,7 +252,7 @@
                 </li>
             </ul>
 
-            <p>Since PCIs are often used in lieu of CABGs, we'd expect more patients to have more PCIs in this dataset.</p>
+            <p>Since PCIs are often used in lieu of CABGs, we'd expect more patients to have more PCIs than CABGs in this dataset.</p>
 
             <p>This graph only looks at patients who had a catheterization file (some patients only appear to have a PCI or CABG file but no catheterization file, so I left them out for this analysis). To make it I counted the number of occurrences for each patient's file number in the PCI and CABG records and recorded them in a new column (one for each procedure).</p>
 
@@ -276,18 +276,30 @@
         <div class="section-title">
             <h2>Question 4:</h2>
             <ul>
-                <li>Of the patients that had at least one procedure file (either PCI or CABG), how many procedures have typically been recorded per patient? (A new question that wasn't originally in the proposed analysis questions, but I thought this would follow up well with Question 3) </li>
+                <li>How many procedures have typically been recorded per patient? (A new question that wasn't originally in the proposed analysis questions, but I thought this would follow up well with Question 3) </li>
             </ul>
         </div>
 
         <div class="section-content">
-            <p>This uses the same data as the above graph, but I added a parameter to show the number of procedures for each patient. Because there's so much data I only decided to look at patients who had at least one procedure (either PCI or CABG) for this question.</p>
+            <p>This uses the same data as the above graph, but now it's a histogram showing the frequency of values for the number of procedures.</p>
             <div class="image">
-                <img src="approach99-q3a.png">
+                <img src="a99q4a.png">
 
-                <div class="info-box" style="left:760px;bottom:200px;">
-                    <p>This looks like a histogram</p>
+                <div class="info-box" style="left:790px;bottom:200px;">
+                    <p>This histogram bins the possible values for number of <b>PCI</b> procedure records and counts the frequency of these values.</p>
                 </div>
+
+                <div class="float-box" style="left:100px;bottom:300px;">
+                    <p>The highest count of procedures occurs in patients with acute coronary syndrome, but most patients with this condition don't even have a PCI record</p>
+                </div>
+
+                <div class="float-box" style="left:490px;bottom:150px;">
+                    <p>Though there's very low frequencies in these higher values, it's surprising that the patients had this many procedures done to them. We must also remember that this data is over the course of 8 years, so it's possible a patient could have a procedure done to them every year.</p>
+                </div>
+            </div>
+
+            <div class="image">
+                <img src="approach99-q4b.png">
             </div>
 
             <p></p>
@@ -308,8 +320,6 @@
         <div class="section-title">
             <h2>Question 6:</h2>
             <ul>
-
-                7`
                 <li>Have Alberta health facilities been taking more and more non-Alberta patients or less?
                 </li>
             </ul>
