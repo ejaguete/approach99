@@ -44,31 +44,44 @@
             <p>To answer my question I looked at the record counts of these indications and viewed them by sex, year, and then both, and marked anything I thought was noteworthy as well as showed the trendlines for the record counts by year.</p>
 
             <p>First let's look at the gist of the data:</p>
-            <div class="float-left" style="left:960px;bottom:-100px;">
-                <p>This bar graph shows the total count of files over all the years recorded in the dataset for each indication for a catheter.</p>
+
+            <div class="image">
+
+                <!-- graph info -->
+                <img src="approach99-q1a.png">
+                <div class="float-box" style="left:960px;bottom:-100px;">
+                    <p>This bar graph shows the total count of files over all the years recorded in the dataset for each indication for a catheter.</p>
+                </div>
+
+                <div class="float-box" style="left:960px;bottom:-420px;">
+                    <p>This line graph shows the total (both sexes together) record count of the different catheter indications from 2008 to 2016. Noticeable peaks and dips are shown too.</p>
+                    <p>The black lines are the actual counts, the red dotted lines are <b>polynomial (degree 2)</b> trendlines.</p>
+                </div>
+
+                <!-- info -->
+                <div class="float-box" style="left:50px; bottom:-30px;">
+                    <p>Acute coronary syndrome clearly has the highest count for both sexes</p>
+                </div>
+
+                <div class="float-box" style="left:600px; bottom:-30px;">
+                    <p>Females consistently have a lower record count, roughly 1:2 female-to-male ratio in every category</p>
+                </div>
+
+                <div class="float-box" style="left:50px;bottom:-360px;">
+                    <p>In general there's a positive trend for number of patients over the years for each category</p>
+                </div>
             </div>
 
-            <div class="float-left" style="left:960px;bottom:-420px;">
-                <p>This line graph shows the total (both sexes together) record count of the different catheter indications from 2008 to 2016. Noticeable peaks and dips are shown too.</p>
-                <p>The black lines are the actual counts, the red dotted lines are <b>linear</b> trendlines.</p>
-            </div>
+            <p>These graphs are pretty straightforward and were made by graphing the catheter indication and sex/year data against the count of number of records. There were no rows that contained null values for these attributes.</p>
 
-            <img src="approach99-q1a.png">
-
-            <p>These graphs are pretty straightforward and were made by graphing the catheter indication and sex/year data against the count of number of records. There were no rows that contained null values.</p>
-            <p>I found that:</p>
+            <p> Some additional stuff about the trends:</p>
             <ul>
-                <li>Acute coronary syndrome clearly has the highest count for both sexes</li>
-                <li>Females consistently have a lower record count, roughly 1:2 female-to-male ratio in every category</li>
-                <li>In general the number of patients receiving a catheter procedure is increasing until 2016
-                        <ul>
-                        <li>There's a peak-dip-peak pattern between 2012-2015 for acute coronary syndrome</li>
-                        <li>You can see a dip in patient records in 2012 for stable angina</li>
-                        <li>Records for 'other' conditions dipped in 2013 and then rose until 2015</li>
-                        <li>There are very few records whether either the data entries were unknown or not recorded. 2012 has the highest count for unknown data</li>
-                    </ul>
-                    </li>
-                <li>The 'Unknown' category looks like a hump so the trendline is pretty flat</li>
+                <li>There's a peak-dip-peak pattern between 2012-2015 for acute coronary syndrome</li>
+                <li>You can see a dip in patient records in 2012 for stable angina</li>
+                <li>Records for 'other' conditions dipped in 2013 and then rose until 2015</li>
+                <li>There are very few records whether either the data entries were unknown or not recorded. 2012 has the highest count for unknown data. It also is shaped like a hump</li>
+                <li>There's fluctuation noted between 2012-2015, the data generally plateaus by 2016 (except in 'Other' where it increases)</li>
+
             </ul>
 
             <p>The r-squared and p-values for the trendlines (trimmed to 4 decimal places, not rounded):</p>
@@ -98,7 +111,17 @@
                     <td>0.6475</td>
                     <td>0.0438</td>
                 </tr>
+
             </table>
+
+            <sub>Note:</sub><br>
+            <sub>R-squared is a measure from 0 to 1 of how close the data is to the fitted trendline; higher is better.</sub><br>
+            <sub>P-value is the probability that the equation for the trendline was a result of random chance; lower is better (&le; 0.05 is pretty good).</sub>
+
+            <p>Linear trendlines represented most of the data pretty well. 'Stable Angina' wasn't great (R-squared = 0.3666, p-value = 0.0839), the dip in 2012 is probably contributing to that. The 'Unknown' category didn't do well with a linear trendline -- since it looks like a hump a linear trendline did an abysmal job representing it (R-squared = 0.0788, p-value = 0.4641).</p>
+            <p>I switched to a polynomial representation of the trends and the trendline for the 'Unknown' category improved; the representation for the other categories also improved slightly. 'Stable Angina' <i>still</i> doesn't have as good scores as the others but it's better than it was with the linear trendline.</p>
+
+            <p>I also went a little deeper and plotted the same line graph but partitioned the data by male and female, so you can see the trends in better detail.</p>
 
             <img src="approach99-q1b.png">
 

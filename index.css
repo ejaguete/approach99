@@ -10,16 +10,24 @@ img {
     margin:auto;
 }
 
-.float-left {
+table, th, td {
+    border:1px #eee solid;
+    border-collapse: collapse;
+    border-spacing:5px;
+    padding:5px;
+}
+
+.image:hover .float-box {
+    display:inline-block;
     background-color:#f6ecdb;
-    padding:5px 20px;
+    padding:5px 10px;
     margin:0;
     position:absolute;
     max-width:200px;
-    text-align: left;
-    font-size:12px;
+    text-align: center;
+    font-size:11px;
 }
 
-.float-left ul {
-    font-size:11px;
+.float-box {
+    display:none;
 }
