@@ -44,12 +44,61 @@
             <p>To answer my question I looked at the record counts of these indications and viewed them by sex, year, and then both, and marked anything I thought was noteworthy as well as showed the trendlines for the record counts by year.</p>
 
             <p>First let's look at the gist of the data:</p>
-            <div class="float-left" style="left:960px;bottom:-150px;">
+            <div class="float-left" style="left:960px;bottom:-100px;">
                 <p>This bar graph shows the total count of files over all the years recorded in the dataset for each indication for a catheter.</p>
-                <p>Acute coronary syndrome clearly has the highest count for both sexes. Females consistently have a lower record count, roughly one female for every two males have the same catheter indication.</p>
+            </div>
+
+            <div class="float-left" style="left:960px;bottom:-420px;">
+                <p>This line graph shows the total (both sexes together) record count of the different catheter indications from 2008 to 2016. Noticeable peaks and dips are shown too.</p>
+                <p>The black lines are the actual counts, the red dotted lines are <b>linear</b> trendlines.</p>
             </div>
 
             <img src="approach99-q1a.png">
+
+            <p>These graphs are pretty straightforward and were made by graphing the catheter indication and sex/year data against the count of number of records. There were no rows that contained null values.</p>
+            <p>I found that:</p>
+            <ul>
+                <li>Acute coronary syndrome clearly has the highest count for both sexes</li>
+                <li>Females consistently have a lower record count, roughly 1:2 female-to-male ratio in every category</li>
+                <li>In general the number of patients receiving a catheter procedure is increasing until 2016
+                        <ul>
+                        <li>There's a peak-dip-peak pattern between 2012-2015 for acute coronary syndrome</li>
+                        <li>You can see a dip in patient records in 2012 for stable angina</li>
+                        <li>Records for 'other' conditions dipped in 2013 and then rose until 2015</li>
+                        <li>There are very few records whether either the data entries were unknown or not recorded. 2012 has the highest count for unknown data</li>
+                    </ul>
+                    </li>
+                <li>The 'Unknown' category looks like a hump so the trendline is pretty flat</li>
+            </ul>
+
+            <p>The r-squared and p-values for the trendlines (trimmed to 4 decimal places, not rounded):</p>
+            <table>
+                <tr>
+                    <th>Indication</th>
+                    <th>R-squared</th>
+                    <th>p-value</th>
+                </tr>
+                <tr>
+                    <td>Acute Coronary Syndrome</td>
+                    <td>0.8146</td>
+                    <td>0.0006</td>
+                </tr>
+                <tr>
+                    <td>Stable Angina</td>
+                    <td>0.5789</td>
+                    <td>0.0746</td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                    <td>0.9287</td>
+                    <td>0.0003</td>
+                </tr>
+                <tr>
+                    <td>Not Entered/Unknown</td>
+                    <td>0.6475</td>
+                    <td>0.0438</td>
+                </tr>
+            </table>
 
             <img src="approach99-q1b.png">
 
