@@ -231,7 +231,7 @@
         <div class="section-title">
             <h2>Question 3:</h2>
             <ul>
-                <li>What is the relationship between catheterization indication and the amount of procedures done, for each procedure (catheterization, PCI, CABG)? (Reworded from: For each type of catheterization indication, are there distinct patterns in how many procedures a patient has?)</li>
+                <li>What is the relationship between catheterization indication and the amount of procedures done, for each procedure ( PCI, CABG)? (Reworded from: For each type of catheterization indication, are there distinct patterns in how many procedures a patient has?)</li>
             </ul>
         </div>
 
@@ -254,7 +254,7 @@
 
             <p>Since PCIs are often used in lieu of CABGs, we'd expect more patients to have more PCIs in this dataset.</p>
 
-            <p>These next visuals only look at patients who had a catheterization file (some patients only appear to have a PCI or CABG file but no catheterization file, so I left them out for this analysis). To make the graphs I counted the number of occurrences for each patient's file number in the PCI and CABG records and recorded them in a new column (one for each procedure).</p>
+            <p>This graph only looks at patients who had a catheterization file (some patients only appear to have a PCI or CABG file but no catheterization file, so I left them out for this analysis). To make it I counted the number of occurrences for each patient's file number in the PCI and CABG records and recorded them in a new column (one for each procedure).</p>
 
             <div class="image">
                 <img src="approach99-q2a.png">
@@ -271,15 +271,26 @@
                     <p>Most PCIs recorded were for patients with acute coronary syndrome</p>
                 </div>
             </div>
-
-            <img src="approach99-q3a.png">
         </div>
 
         <div class="section-title">
             <h2>Question 4:</h2>
             <ul>
-                <li>Are patients with an unknown or 'other' indication coming in for more procedures than patients with acute coronary syndrome? </li>
+                <li>Of the patients that had at least one procedure file (either PCI or CABG), how many procedures have typically been recorded per patient? (A new question that wasn't originally in the proposed analysis questions, but I thought this would follow up well with Question 3) </li>
             </ul>
+        </div>
+
+        <div class="section-content">
+            <p>This uses the same data as the above graph, but I added a parameter to show the number of procedures for each patient. Because there's so much data I only decided to look at patients who had at least one procedure (either PCI or CABG) for this question.</p>
+            <div class="image">
+                <img src="approach99-q3a.png">
+
+                <div class="info-box" style="left:760px;bottom:200px;">
+                    <p>This looks like a histogram</p>
+                </div>
+            </div>
+
+            <p></p>
         </div>
 
         <div class="section-title">
