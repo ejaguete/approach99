@@ -2,18 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>APPROACH99 Data Analysis</title>
+    <title>APPROACH Data Analysis</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
     <h1>APPROACH99 Data Analysis</h1>
+    <h3>Erica Aguete, University of Calgary</h3>
     <div class="section">
         <div class="section-title">
             <h2>Introduction</h2>
         </div>
         <div class="section-content">
-            <p>talk about approach99 data, explain what approach99 is (what it means)</p>
-            <p>This data deals with cardiovascular disease and references a lot of medical jargon that has to do with it. I'll be talking about stuff like coronary arteries, heart conditions, and procedures that are supposed to help relieve these conditions. I'll be explaining any terms along the way of this story.</p>
+            <p>The APPROACH dataset was provided by Danielle Southern, one of the clients for this course. APPROACH is an acronym for <b>A</b>lberta <b>P</b>rovincial <b>P</b>roject for <b>O</b>utcome <b>A</b>ssessment in <b>C</b>oronary <b>H</b>eart Disease. The individuals working on this project have a goal of making sure that patients are receiving the right treatments at the right times. They've been regularly collecting and processing information about patients (with their permission) to improve cardiac care.</p>
+
+            <p><b>What kind of data are they collecting?</b></p>
+            <p>APPROACH data has been collected at different stages of a patient's journey through the hospital, including information about their diagnostic procedures, and when they have treatments. Since this data involves personal information about patients it's been anonymized so it can be presented in public. I've also been given data from 2008 to 2016, so that's 8 years worth of data to analyze.</p>
+
+            <p>The data has only been used to report the rates of procedures over the years, but the team wants to see if they can get more information out of their data.</p>
+
+            <p><b>There's medical stuff related?</b></p>
+            <p>This data deals with cardiovascular disease and references a lot of medical jargon that has to do with it. I'll be talking about stuff like coronary arteries, heart conditions, and procedures that are supposed to help relieve these conditions, and will explain any terms along the way of this story.</p>
+            <p><b>The Data Story</b></p>
             <p>The following questions are actually only a few of my proposed questions, with some tweaks here and there. My original questions were mostly the same questions but each one had 2-4 miniature questions, so I wanted to break them up.</p>
             <p>All questions come with a visual, and there are observations for the visual that you can read if you hover your mouse over the image. An overall summary (and additional info) will be written below the image.</p>
         </div>
@@ -21,7 +30,7 @@
 
     <div class="section">
         <div class="section-title">
-            <h2>Question 1:</h2>
+            <h2>Question 1</h2>
             <ul>
                 <li>What is the distribution of catheterization indication amongst males and females?</li>
                 <li>Is there a specific year when each category peaks or dips noticeably in the data? (changed from: Have any indications for catheters become prevalent in a specific year?)</li>
@@ -47,11 +56,11 @@
             <div class="image">
                 <!-- graph info -->
                 <img src="approach99-q1a.png">
-                <div class="info-box " style="left:760px;bottom:450px;">
+                <div class="info-box " style="left:860px;bottom:400px;">
                     <p>This bar graph shows the total count of files over all the years recorded in the dataset for condition.</p>
                 </div>
 
-                <div class="info-box " style="left:760px;bottom:100px;">
+                <div class="info-box " style="left:-170px;bottom:100px;">
                     <p>This line graph shows the total (both sexes together) record count of the different conditions from 2008 to 2016. Noticeable peaks and dips are shown too.</p>
                     <p>The black lines are the actual counts, the red dotted lines are <b>polynomial (degree 2)</b> trendlines.</p>
                 </div>
@@ -76,7 +85,7 @@
         </div> <!-- end content -->
 
         <div class="section-title">
-            <h2>Question 2:</h2>
+            <h2>Question 2</h2>
             <ul>
                 <li>What are the trends of the recorded catheterization indications?</li>
             </ul>
@@ -87,21 +96,21 @@
             <div class="image">
                 <img src="approach99-q1a2.png">
 
-                <div class="float-box " style="left:230px;bottom:320px;">
+                <div class="float-box " style="left:330px;bottom:320px;">
                     <p>In general there's a positive trend for number of patients over the years for each condition</p>
                 </div>
 
-                <div class="float-box " style="left:45px;bottom:50px;">
+                <div class="float-box " style="left:145px;bottom:50px;">
                     <p>Some fluctuation in number of patients between 2012-2015 for all categories</p>
                     <p>Data has fairly flat slope from 2015-2016 for all categories</p>
                 </div>
 
-                <div class="float-box " style="left:615px;bottom:150px;">
+                <div class="float-box " style="left:715px;bottom:150px;">
                     <p>Looks like a hump!</p>
                 </div>
 
-                <div class="info-box " style="left:780px;bottom:100px;">
-                    <p>The r-squared and p-values for the trendlines (trimmed to 4 decimal places, not rounded):</p>
+                <div class="info-box " style="left:-170px;bottom:0px;">
+                    <p>The R-squared and p-values for the trendlines (trimmed to 4 decimal places, not rounded):</p>
                     <table>
                         <tr>
                             <th>Condition</th>
@@ -143,7 +152,7 @@
 
            <div class="image">
                <img src="approach99-q1b.png">
-               <div class="info-box" style="left:760px;bottom:150px;">
+               <div class="info-box" style="left:850px;bottom:150px;">
                    <p>The timelines for patient count now show only males or females. What you saw in the previous line graph was pretty much the sum of these line charts for each category.</p>
                    <p>These trendlines are also polynomial (degree 2).</p>
                </div>
@@ -154,7 +163,7 @@
                </div>
 
                <!-- info -->
-               <div class="float-box" style="left:430px;bottom:200px;">
+               <div class="float-box" style="left:430px;bottom:250px;">
                    <p>Trends are still generally positive, the pattern for unknown data is pretty similar for both sexes</p>
                </div>
            </div>
@@ -163,7 +172,7 @@
             <div class="image">
                 <img src="approach99-q1c.png">
 
-                <div class="info-box" style="left:760px;bottom:200px;">
+                <div class="info-box" style="left:-170px;bottom:200px;">
                     <p>R-squared and p-values for the trendlines (trimmed to 4 decimal places, not rounded):</p>
                     <table>
                         <tr>
@@ -219,7 +228,7 @@
                     </table>
                 </div>
 
-                <div class="float-box " style="left:-130px;bottom:190px;">
+                <div class="float-box " style="left:630px;bottom:200px;">
                     <p>The slope for trends in females looks slightly less pronounced (looks 'flatter') in all categories</p>
                 </div>
             </div>
@@ -229,7 +238,7 @@
         </div>
 
         <div class="section-title">
-            <h2>Question 3:</h2>
+            <h2>Question 3</h2>
             <ul>
                 <li>How many procedures in total are being done for each condition? (Not part of the original proposed questions, but this more specific than asking what the relationship is between number of procedures and the conditions?</li>
             </ul>
@@ -245,7 +254,7 @@
                         <li>is an alternative to CABG</li>
                     </ul>
                 </li>
-                <li><b>coronary artery bypass surgery</b> (CABG): a surgical procedure to restore normal bloodflow to an obstructed coronary artery<sup>[5]</sup>
+                <li><b>coronary artery bypass grafting</b> (CABG): a surgical procedure to restore normal bloodflow to an obstructed coronary artery<sup>[5]</sup>
                     <ul>
                         <li>often for when coronary arteries have a 50 to 99% obstruction<sup>[5]</sup></li>
                     </ul>
@@ -259,33 +268,37 @@
             <div class="image">
                 <img src="approach99-q2a.png">
 
-                <div class="info-box" style="left:760px;bottom:200px;">
+                <div class="info-box" style="left:900px;bottom:200px;">
                     <p>This graph shows the <i>total</i> number of procedures that were recorded for each condition in the data.</p>
                 </div>
 
-                <div class="float-box" style="left:200px;bottom:400px;">
+                <div class="float-box" style="left:250px;bottom:100px;">
                     <p>Patients who had a catheterization file definitely mostly had PCIs as opposed to CABGs</p>
                 </div>
 
-                <div class="float-box" style="left:20px;bottom:100px;">
+                <div class="float-box" style="left:0px;bottom:250px;">
                     <p>Most PCIs recorded were for patients with acute coronary syndrome</p>
                 </div>
             </div>
+            <p>Considering acute coronary syndrome includes heart attacks and PCIs are for heart attacks, this data makes sense.</p>
         </div>
 
+
         <div class="section-title">
-            <h2>Question 4:</h2>
+            <h2>Question 4</h2>
             <ul>
                 <li>How many procedures have typically been recorded per patient? (A new question that wasn't originally in the proposed analysis questions, but I thought this would follow up well with Question 3) </li>
             </ul>
         </div>
 
         <div class="section-content">
-            <p>This uses the same data as the above graph, but now it's a histogram showing the frequency of values for the number of procedures.</p>
+            <p>These next graphs use the same data as the above graph, but now they're histograms showing the frequency of values for the number of procedures. They were created by binning the count of PCIs and CABGs (a range of integers starting at 0) in the dataset and then counting the occurrences of these bins. The counts are partitioned by condition.</p>
+
+            <p>Here's the one for PCIs:</p>
             <div class="image">
                 <img src="a99q4a.png">
 
-                <div class="info-box" style="left:790px;bottom:200px;">
+                <div class="info-box" style="left:-170px;bottom:150px;">
                     <p>This histogram bins the possible values for number of <b>PCI</b> procedure records and counts the frequency of these values.</p>
                 </div>
 
@@ -294,27 +307,71 @@
                 </div>
 
                 <div class="float-box" style="left:490px;bottom:150px;">
-                    <p>Though there's very low frequencies in these higher values, it's surprising that the patients had this many procedures done to them. We must also remember that this data is over the course of 8 years, so it's possible a patient could have a procedure done to them every year.</p>
+                    <p>Though there's very low frequencies in these higher values, it's surprising that the patients had this many procedures done to them. We must also remember that this data is over the course of 8 years, so it's possible a patient could have a procedure done to them every year</p>
                 </div>
             </div>
 
+            <p>Here's the one for CABGs:</p>
             <div class="image">
                 <img src="approach99-q4b.png">
+
+                <div class="info-box" style="left:-170px;bottom:500px;">
+                    <p>This one shows the possible values for number of <b>CABG</b> procedure records and their frequencies.</p>
+                </div>
+
+                <div class="float-box" style="left:300px;bottom:400px;">
+                    <p>These frequencies are generally higher than the ones for PCIs, which means CABGs are less common amongst these patients</p>
+                </div>
             </div>
 
-            <p></p>
+            <p>These numbers aren't too surprising since there are about 48,000 rows of PCI files and only about 12,000 rows of CABG files. Most patients with a catheterization file don't appear to have a CABG file.</p>
         </div>
 
         <div class="section-title">
             <h2>Question 5:</h2>
             <ul>
-                <li>Is there a relationship between the location of the patient and which facility they are having their procedure done?</li>
-                <li>Are some facilities busier than others based on the amount of procedures recorded in the data?</li>
+                <li>Is there a relationship between the location (zone) of the patient and which facility they are having their procedure done? Does one facility seem to have more patients coming for a certain procedure than others?</li>
             </ul>
         </div>
 
+        <p>There are five zones in the dataset: Calgary, Central, Edmonton, North, and South. The hospitals shown as facilities in the dataset are: Foothills, University of Alberta, and Royal Alexandria. The latter two are located in Edmonton, Foothills is located in Calgary.</p>
+        <p>Generally I would think that patients would have procedures done at the nearest hospital.</p>
+
+        <p>The graphs below were made by graphing the facilities and zones in the data for each kind of procedure.</p>
+
         <div class="section-content">
-            <img src="approach99-q5.png">
+            <div class="image">
+                <p>Let's look at the distribution of patients with catheterization files.</p>
+                <img src="a99q5a.png">
+
+                <div class="float-box" style="left:480px;bottom:450px;">
+                    <p>As expected, the majority of Calgary residents would go to Foothills since it's in their city</p>
+                    <p>South residents would also be closer to Foothills than the other two</p>
+                </div>
+
+                <div class="float-box" style="left:700px;bottom:100px;">
+                    <p>Residents in Central, Edmonton and North would go to either of the Edmonton hospitals. The number of patients seems evenly split between U of A and Royal Alexandria</p>
+                </div>
+            </div>
+
+            <p>Now for patients with PCI files.</p>
+            <div class="image">
+                <img src="a99q5b.png">
+                <div class="float-box" style="left:50px;bottom:300px;">
+                    <p>The distribution of PCI files is pretty similar to the catheterization files</p>
+                </div>
+            </div>
+
+            <p>And here we have patients with CABG files.</p>
+            <div class="image">
+                <img src="a99q5c.png">
+
+                <div class="float-box" style="left:600px;bottom:400px;">
+                    <p>Still the same, except no patients have had a CABG filed in Royal Alexandria, so any patients that did have one went to U of A Hospital</p>
+                </div>
+            </div>
+
+            <p>Generally patients from the Calgary and South zone are going to Foothills Hospital for all procedures (catheterization, PCI, CABG) while patients from the Central, Edmonton and North zone are going either to University of Alberta or Royal Alexandria Hospital for procedures; except for CABGs, of which all patients in those areas went to University of Alberta Hospital for CABGs.</p>
         </div>
 
         <div class="section-title">
@@ -326,7 +383,37 @@
         </div>
 
         <div class="section-content">
-            <img src="approach99-q6.png">
+            <p>There are rows in the dataset for which no location is specified, which likely means that the patient is a non-Alberta resident. I wanted to see the rates for non-Alberta patients having procedures done at these hospitals.</p>
+
+            <p>The line graph below was created by graphing the number of records for each procedure against year as well as facility.</p>
+            <div class="image">
+                <img src="approach99-q6.png">
+
+                <div class="info-box" style="left:960px;bottom:200px;">
+                    <p>These line graphs show the number of patient records for each year (2008-2016) and are each partitioned by facility.</p>
+                    <p>Respectively, the first one shows patient records for catheterization files, then PCI files, then CABG files.</p>
+                </div>
+
+                <div class="float-box" style="left:300px;bottom:400px;">
+                    <p>There was an influx of patients that had catheterizations done in Royal Alexandria Hospital in 2011</p>
+                </div>
+
+                <div class="float-box" style="left:-10px;bottom:340px;">
+                    <p>Foothills and U of A Hospital seem to have gained more patients for catheterizations over the years</p>
+                </div>
+
+                <div class="float-box" style="left:490px;bottom:170px;">
+                    <p>There was a spike in patients needing PCIs for Royal Alexandria, also in 2011</p>
+                </div>
+
+                <div class="float-box" style="left:660px;bottom:70px;">
+                    <p>The amount of CABGs done hasn't changed much. Note how Royal Alexandria Hospital has no records at all</p>
+                </div>
+            </div>
+
+            <p>The catheterization rates seem to have the highest difference between the minimum and maximum amount of procedures, and their rates are more erratic (more hills and valleys) than both PCI and CABG rates.</p>
+            <p>I would conclude that Foothills and U of A Hospital have been taking more non-Alberta patients over the years for catheterizations and PCIs (but the trend aren't as prominent), but Royal Alexandria has been taking less.</p>
+            <p>These graphs don't have trendlines because the R-squared and p-values for them were too low to justify keeping the lines. The rates change often enough that more than half the data isn't accurately represented by the trendline.</p>
         </div>
 
     </div>
